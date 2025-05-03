@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' version '1.8.10' // 添加 Kotlin 插件并统一版本
+}
+
+android {
+    viewBinding {
+        enabled = true
+    }
+    namespace 'com.example.wyzx'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.wyzx"
+        minSdk 25
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    ndkVersion "25.2.9519653"
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        outputFileName = "wyzx-1.0.apk" // 指定生成的 APK 文件名
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.activity:activity:1.7.2'
+    implementation 'androidx.core:core-ktx:1.10.1'
+
+    // 其他库
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // 统一 Kotlin 标准库版本
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+    implementation 'com.facebook.fresco:fresco:2.5.0'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.google.android.material:material:1.9.0' // 检查最新版本
+
+
+
+
+}

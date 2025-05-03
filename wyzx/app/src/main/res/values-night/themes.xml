@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- 基础应用程序主题。-->
+    <style name="Theme.Wyzx" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <!-- 主品牌颜色。-->
+        <item name="colorPrimary">@color/purple_500</item>
+        <!-- 用于设置主题的主颜色，通常用于应用的头部、按钮等区域，这里使用的是 @color/purple_500（紫色的500色）。-->
+
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!-- 主颜色的变体，用于不同的界面元素或状态，通常为暗色调版本，这里使用的是 @color/purple_700（紫色的700色）。-->
+
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- 主颜色上方的文本或图标的颜色，通常用来提高可读性，这里设置为白色 (@color/white)。-->
+
+        <!-- Secondary brand color. -->
+        <!-- 次品牌颜色。-->
+        <item name="colorSecondary">@color/teal_200</item>
+        <!-- 次要颜色，通常用于应用中的次要操作、按钮等，这里使用的是 @color/teal_200（蓝绿色的200色）。-->
+
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <!-- 次要颜色的变体，用于在不同状态下显示，通常是次要颜色的深色版本，这里使用的是 @color/teal_700（蓝绿色的700色）。-->
+
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- 次要颜色上方的文本或图标的颜色，这里设置为黑色 (@color/black)。-->
+
+        <!-- Status bar color. -->
+        <!-- 状态栏颜色。-->
+        <item name="android:statusBarColor">@color/aluminum</item>
+        <!-- 设置状态栏的颜色，使用了 ?attr/colorPrimaryVariant，这意味着状态栏的颜色将使用定义的主颜色变体（@color/purple_700）。-->
+
+        <!-- Customize your theme here. -->
+        <!-- 在这里可以进一步自定义主题。-->
+    </style>
+</resources>

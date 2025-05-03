@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- 1. AppBarLayout 使用 Material 组件 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <!-- 2. CollapsingToolbarLayout 配置优化 -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
+            android:fitsSystemWindows="true">
+
+            <!-- 3. MaterialToolbar 配置 -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:titleTextColor="@android:color/white"/>
+
+            <!-- 4. 自定义ToolBar区域 -->
+            <RelativeLayout
+                android:id="@+id/stuff_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="16dp"
+                app:layout_collapseMode="parallax">
+
+                <!-- 5. CircleImageView 头像 -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cat_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/touxiang"/>
+
+                <!-- 6. 标题文本 -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/cat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/cat_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="Title"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 7. 内容区域 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/content_about_me"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

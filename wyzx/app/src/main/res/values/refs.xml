@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_placeholder" />
+    <drawable name="ic_error" />
+    <drawable name="abc_ic_ab_back_material" />
+    <drawable name="default_image" />
+    <drawable name="placeholder_image" />
+    <drawable name="error_image" />
+    <drawable name="banner1" />
+    <drawable name="banner2" />
+    <drawable name="placeholder" />
+    <drawable name="error" />
+    <drawable name="default_category_image" />
+    <drawable name="ic_arrow_back_white_24dp" />
+    <drawable name="ic_arrow_back_white" />
+    <drawable name="ic_arrow_back" />
+    <drawable name="setting_back" />
+    <drawable name="ic_default_image" />
+    <drawable name="btn_primary_selector" />
+</resources>

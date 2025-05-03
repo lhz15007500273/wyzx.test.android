@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/titlebarColor">
+
+        <SearchView
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass">
+
+        <ListView
+            android:id="@+id/dataList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

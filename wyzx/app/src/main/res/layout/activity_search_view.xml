@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部搜索栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:layout_centerVertical="true"
+            android:queryHint="搜索..."
+            android:iconifiedByDefault="false"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"/>
+    </RelativeLayout>
+
+
+    <!-- 历史记录标题 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史搜索"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清空历史"
+            android:textColor="#999999"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- 历史记录列表 -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+</LinearLayout>
